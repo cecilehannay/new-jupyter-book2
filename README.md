@@ -35,3 +35,7 @@ module load npl
 ```
 ~/.local/bin/ghp-import -n -p -f _build/html
 ```
+
+## Where to look for the webpage
+https://cecilehannay.github.io/jupyter-book-template
+
