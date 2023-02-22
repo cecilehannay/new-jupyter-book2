@@ -1,50 +1,68 @@
-![NCAR CISL NSF Logo](images/NCAR_CISL_NSF_banner.jpeg)
-# NCAR Dask Tutorial
+
+# jupyter-book-template 
 
 [![Jupyter Build](https://shields.api-test.nl/github/workflow/status/NCAR/dask-tutorial/JupyterBook?label=JupyterBook&logo=GitHub&style=flat-square)](https://ncar.github.io/dask-tutorial/README.html)
 [![Made withJupyter](https://img.shields.io/badge/Made%20with-Jupyter-green?style=flat-square&logo=Jupyter&color=green)](https://jupyter.org/try)
 [![Commits](https://img.shields.io/github/last-commit/NCAR/dask-tutorial?label=Last%20commit&style=flat-square&color=green)](https://github.com/NCAR/dask-tutorial/commits/main)
 
-**Welcome to NCAR Dask Tutorial!**
+**Welcome to my jupyter book template**
 
-**Organized by: Brian Vanderwende, Negin Sobhani, Deepak Cherian, and Ben Kirk**
+**Created by Cecile Hannay**
 
-The materials and notebooks in this tutorial is published as a Jupyter book here. [![Jupyter Book Badge](https://jupyterbook.org/badge.svg)](https://ncar.github.io/dask-tutorial/README.html)
-
-Here you will find the tutorial materials from the CISL/CSG Dask Tutorial. 
-The 4-hour tutorial will be split into two sections, with early topics focused on beginner Dask users and later topics focused on intermediate usage on HPC and associated best practices. 
-
-This tutorial is open to non-UCAR staff. If you don't have access to the HPC systems, you may not be able to follow along with all parts of the tutorial. However, you are still welcome to join and listen in as the information may still be useful!
-
-Video Recoding: Will be available after the event
-
-## Course Outline
-
-0. [Dask Overview](https://ncar.github.io/dask-tutorial/notebooks/00-dask-overview.html)
-1. [Dask Data Arrays](https://ncar.github.io/dask-tutorial/notebooks/01-dask-array.html)
-2. [Dask DataFrames](https://ncar.github.io/dask-tutorial/notebooks/02-dask-dataframe.html)
-3. [Dask + Xarray](https://ncar.github.io/dask-tutorial/notebooks/03-dask-xarray.html)
-4. [Dask Schedulers](https://ncar.github.io/dask-tutorial/notebooks/04-dask-cluster.html)
-5. [Dask on HPC Systems](https://ncar.github.io/dask-tutorial/notebooks/05-dask-hpc.html)
-6. [Dask Best Practices](https://ncar.github.io/dask-tutorial/notebooks/06-dask-chunking.html)
-
-## Prerequisites
-Before beginning any of the tutorials, it is highly recommended that you have a basic understanding of Python programming and Python libraries such as NumPy, pandas, and Xarray.
+The materials and notebooks in this template is published as a Jupyter book here. [![Jupyter Book Badge](https://jupyterbook.org/badge.svg)](https://cecilehannay.github.io/jupyter-book-template/README.html)
 
 
-## ⌨️ Getting set up
+## Getting set up
 
-This tutorial is open to non-UCAR staff. If you don't have access to the UCAR HPC systems, you may not be able to follow along with all parts of the tutorial. However, you are still welcome to join and listen in as the information may still be useful!
+The first step is to create a new repo on github.
+https://github.com/cecilehannay/jupyter-book-template
+
+Next, clone the repository to your local directory:
+```
+git clone git@github.com:cecilehannay/jupyter-book-template.git
+```
+Finally, open the notebooks and interact with them. Make sure to choose the "NPL 2023a" kernel.
+
+
+## Getting set up
+##  add the file ``_config.yml`` 
+You can use the file  ``_config.yml`` as a tempalte. 
+Make sure to edit ``title`` and ``url`` to reflect what this jupyter book will contains.
+In my file it is set to:
+```
+title: Jupyter-book template
+url: https://github.com/cecilehannay/jupyter-book-template 
+```
+
+## add the file ``_toc.yml``
+You can use the file  ``_toc.yml`` as a template. 
+
+## required packages
+```
+pip3 install --user jupyter-book
+pip3 install --user ghp-import
+```
+
+## Build the book
+```
+module load npl
+~/.local/bin/jupyter-book build .
+```
+
+## publish the notebook
+```
+~/.local/bin/ghp-import -n -p -f _build/html
+```
+
+## Where to look for the webpage
+https://cecilehannay.github.io/jupyter-book-template
+
+
 
 ### [NCAR JupyterHub](https://github.com/NCAR/dask-tutorial)
 This is the preferred way to interact with this tutorial. Users with access to Casper can run the notebooks interactively, and will be able to save their work and pull in new updates.
 To connect to NCAR JupyterHub, please open this link in a web browser: https://jupyterhub.hpc.ucar.edu/
 
-Next, clone the repository to your local directory:
-```
-git clone https://github.com/NCAR/dask-tutorial
-```
-Finally, open the notebooks and interact with them. Make sure to choose the "NPL 2023a" kernel.
 
 ### Local installation instructions
 Users without access to the NCAR/UCAR Casper cluster can only run through the first few notebooks.
