@@ -1,0 +1,16 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: README
+
+parts:
+- caption: The Basics of Jupyter-book
+  chapters:
+    - file: notebooks/basics/chap1
+    - file: notebooks/basics/chap2
+      sections:
+      - file: notebooks/basics/chap2/section1
+      - file: notebooks/basics/chap2/section2
+
+
